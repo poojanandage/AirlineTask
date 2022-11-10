@@ -1,0 +1,20 @@
+
+
+
+   <div class="">
+    <div class="card  mb-3" [ngClass]="{'alert-success' : getObj.checkedIn === true, 'alert-danger' : getObj.checkedIn === false}">
+        <div class="card-header h5"  ><span *ngIf="flag"  [ngStyle]="{'color' : getObj.checkedIn === true ? 'green' : 'red'}"><i class="fas fa-plane mr-4 "></i>{{getObj.fullname}}</span>
+          <input type="text" name="" id="" class="form-control"[value]="getObj.fullname" (input)="onInput($event)" *ngIf="!flag">
+        </div>
+        <div class="card-body">
+          <p class="card-title">Check in Date : {{(getObj.checkInDate | date) ? (getObj.checkInDate | date) : "Not Checked In"}}</p>
+          <p class="card-title">Children : {{getObj.children === null ? '0': getObj.children.length}}</p>
+            <div class="form-group text-right">
+                <button class="btn btn-outline-primary mx-2" (click)="onEdit($event)" *ngIf="flag">Edit</button> 
+                <button class="btn btn-outline-primary mx-2" (click)="onDone($event)" *ngIf="!flag">Done</button>
+                <button class="btn btn-outline-danger"(click)="onRemove($event)">Remove</button>
+            </div>
+    </div>
+   </div>
+
+

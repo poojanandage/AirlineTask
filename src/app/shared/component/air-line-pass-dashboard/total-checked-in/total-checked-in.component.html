@@ -1,0 +1,16 @@
+
+
+<h4 class="mb-3">Total checked in : {{passengers}} / {{getArrFromAirline.length}}</h4>
+
+<div>
+<h5 class="mb-3 text-center text-success">Name Of Passengers</h5>
+  <ul class="list-group alert-danger"*ngFor="let passName of getArrFromAirline">
+    <li class="list-group-item mb-1">
+          <h5><i class="fas fa-plane mr-4 text-secondary"></i>{{passName.fullname}}</h5>
+    </li>
+  </ul>
+</div>
+
+
+
+
