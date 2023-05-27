@@ -12,10 +12,16 @@ public passengers! : string;
   constructor() { }
 
   ngOnInit(): void {
-  let count = this.getArrFromAirline.filter((ele :any) =>{
-   return ele.checkedIn;
-})
-this.passengers = count.length
+    let count = this.getArrFromAirline.filter((ele :any) =>{
+      return ele.checkedIn;
+   })
+   this.passengers = count.length
   }
+//   getCount(){
+//     let count = this.getArrFromAirline.filter((ele :any) =>{
+//    return ele.checkedIn;
+// })
+// this.passengers = count.length
+//   }
 
 }
